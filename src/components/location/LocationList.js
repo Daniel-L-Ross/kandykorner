@@ -1,9 +1,18 @@
 import React, { useContext, useEffect } from "react"
 import { LocationContext } from './LocationProvider'
+import { LocationCard } from './LocationCard'
 
+export const LocationList = () => {
+    const {locations, getLocations} = useContext(LocationContext)
 
-export const LocationList = () => (
-    <>
-        <div>LocationList prints</div>
-    </>
-)
+    useEffect(() => {
+        getLocations()
+    }, [])
+
+    return (
+        <div className="locations">
+            <h2>Locations</h2>
+            {locations.map(location => <LocationCard key={location.id} location={location}/>)}
+        </div>
+    )
+}
