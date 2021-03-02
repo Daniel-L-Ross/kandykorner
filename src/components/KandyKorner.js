@@ -1,6 +1,12 @@
+import React from "react"
+import { LocationList } from "./location/LocationList"
+import { LocationContext, LocationProvider } from "./location/LocationProvider"
 
 export const KandyKorner = () => (
     <>
-        <div>Welcome to kandykorner</div>
+        <h1>Welcome to kandykorner</h1>
+        <LocationProvider>
+            <LocationList />
+        </LocationProvider>
     </>
 )
