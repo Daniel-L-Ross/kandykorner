@@ -5,7 +5,6 @@ import { ApplicationViews } from "./ApplicationViews"
 
 export const KandyKorner = () => (
     <>
-        <h1>Welcome to kandykorner</h1>
         <NavBar />
         <ApplicationViews />
     </>
